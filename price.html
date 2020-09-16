@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="main.html">Home</a></li>
+  <li><a href="price.html">PRICES</a></li>
+  <li><a href="location.html">LOCATION</a></li>
+   <li><a href="zip.html">ZIP CODE</a></li>
+   <li><a href="faq.html">FAQs</a></li>
+   <li><a href="detail.html">DETAIL</a></li>
+</ul>
+
+<h3 style="text-align: center;">Enter the value and the prices in numbers</h3>
+<h2><p id="answer"></p></h2>
+<div style="margin-left: 400px; width: 400px;">
+	<labe>Enter the size</labe><br>
+<input type="number" id="mine" name="" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"/ placeholder="enter size in cetimetres"><br>
+<label>Enter weight</label><br>
+	<input id="text_a" type="number"  onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"/ placeholder="enter weight in grams"><br>
+	
+	
+
+<button  style="background-color: red;" onclick="myFunction()">Check</button>
+</div>
+<div class="row" style="">
+  <div class="column" style="background-color:white;text-align: center;">
+    <h2 style="color: blue;">UPS</h2>
+    <p><button><p id="ups"></p></button></p>
+    <h3 style="text-align: center;color: blue;">Australian Post</h3>
+    <div class="notes">
+      <p><button><p id="Aus"></p></button></p>
+      
+    </div>
+  </div>
+  <div class="column" style="background-color:white;text-align: center;">
+    <h2 style="color: blue;">Pack and Send</h2>
+    <p><button><p id="Pack"></p></button></p>
+    <h2 style="color: blue">DHL</h2>
+  <p> <button><p id="dhl"></p></button>
+</p>
+  </div>
+</div>
+<div style="background-color:white;text-align: center; margin-left: 400px; width: 400px;">
+    <h2 style="color: blue;">FedEx</h2>
+    <p><button><p id="fed"></p></button></p>
+    
+</p>
+
+
+
+<script>
+	function myFunction()
+{
+var a=document.getElementById("text_a").value;
+var b=document.getElementById("mine").value;
+
+
+
+if (a>0||a<22 && b>0||b<22)
+  {
+document.getElementById("Pack").innerText="$20";
+document.getElementById("dhl").innerText="$30";
+document.getElementById("ups").innerText="$40";
+document.getElementById("Aus").innerText="$20";
+document.getElementById("fed").innerText="$20";
+  }
+
+if (a>21||a<50 && b>21||b<50)
+  {
+document.getElementById("Pack").innerText="$30";
+document.getElementById("dhl").innerText="$40";
+document.getElementById("ups").innerText="$50";
+document.getElementById("Aus").innerText="$30";
+document.getElementById("fed").innerText="$35";
+  }
+  if (a>0||a<22 && b>21||b<100)
+  {
+document.getElementById("Pack").innerText="$22";
+document.getElementById("dhl").innerText="$32";
+document.getElementById("ups").innerText="$42";
+document.getElementById("Aus").innerText="$23";
+document.getElementById("fed").innerText="$31";
+  }
+
+   if (a>21||a<100 && b>0||b<22)
+  {
+document.getElementById("Pack").innerText="$22";
+document.getElementById("dhl").innerText="$32";
+document.getElementById("ups").innerText="$42";
+document.getElementById("Aus").innerText="$23";
+document.getElementById("fed").innerText="$31";
+  }
+  if (a>99 && b>99)
+  {
+document.getElementById("Pack").innerText="$55";
+document.getElementById("dhl").innerText="$100";
+document.getElementById("ups").innerText="$88";
+document.getElementById("Aus").innerText="$120";
+document.getElementById("fed").innerText="$133";
+  }
+
+  if (a>99||a>0 && b<99||b>0)
+  {
+document.getElementById("Pack").innerText="$53";
+document.getElementById("dhl").innerText="$80";
+document.getElementById("ups").innerText="$78";
+document.getElementById("Aus").innerText="$90";
+document.getElementById("fed").innerText="$103";
+  }
+  if (a<99 && b>99)
+  {
+document.getElementById("Pack").innerText="$52";
+document.getElementById("dhl").innerText="$76";
+document.getElementById("ups").innerText="$66";
+document.getElementById("Aus").innerText="$59";
+document.getElementById("fed").innerText="$92";
+  }
+if(a<0 && b<0)
+  {
+alert("Sorry, Enter only allowed numbers ");
+document.getElementById("Pack").innerText="enter only allowed numbers in size option and weight option";
+document.getElementById("dhl").innerText="enter only allowed numbers in size option and weight option";
+document.getElementById("ups").innerText="enter only allowed numbers in size option and weight option";
+document.getElementById("Aus").innerText="enter only allowed numbers in size option and weight option";
+document.getElementById("fed").innerText="enter only allowed numbers in size option and weight option";
+  }
+}
+</script>
+
+<div class="footer">
+  <p>Welcome to Percels analyzsis website</p>
+</div>
+
+</body>
+</html>

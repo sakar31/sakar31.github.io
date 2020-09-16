@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<HTml:5>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h2 style="margin-left: 400px;">Login Form</h2>
+        <form id="form">
+            <div class="container">
+              <label for="uname"><b>Username</b></label> <br>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+          
+              <label for="psw"><b>Password</b></label><br>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+                   <label>
+                <input type="checkbox" checked="" name="remember"> Remember me
+              </label>
+              <button type="submit" >  Login</button>
+               <button  onclick="location.href = 'signup.html';"  style="background-color: blue;width: 100px;" type="submit">signup</button>
+            </div>
+          </form>
+          <script>
+              var form = document.getElementById("form");
+              form.addEventListener('submit', (e)=>{
+                e.preventDefault();
+                window.location.href = "main.html";
+              })
+          </script>
+    </body>
+</HTml:5>
