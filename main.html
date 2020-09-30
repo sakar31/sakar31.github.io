@@ -1,63 +1,106 @@
 <!DOCTYPE html>
 <html>
- <link rel="stylesheet" type="text/css" href="./css/style.css">
+ 
 <head>
- <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="./css/style1.css">
+ 
  <link rel="manifest" href="./manifest.json" />
+ <style>
+  
+ 
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 1182px;
+  color: white;
+  border-radius: 10px;
+}
+  </style>
 </head>
 <body>
+  <div class="mobile-container">
 
-<ul>
-  <li><a class="active" href="main.html">Home</a></li>
-  <li><a href="price.html">PRICES</a></li>
-  <li><a href="location.html">LOCATION</a></li>
-   <li><a href="zip.html">ZIP CODE</a></li>
-   <li><a href="faq.html">FAQs</a></li>
-   <li><a href="detail.html">DETAIL</a></li>
-</ul>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+      <a href="javascript:void(0);" class="icon" onclick="robin()">
+        <i class="fa fa-bars"></i>
+      <a href="main.html" class="active">Home</a>
+      <div id="myLinks">
+        <a href="detail.html">Detail</a>
+        <a href="price.html">Price</a>
+        <a href="location.html">location</a>
+        <a href="zip.html">ZIP</a>
+        <a href="faq.html">FAQs</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="robin()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
 
 
-
- <h1 style="text-align: center;margin-top:0px; ">PARCELS WEBSITE ANALYSIS IN AUSTRALIA</h1>
+ <h1 style="text-align: center;margin-top:0px; ">PARCEL WEB APP</h1>
 <div class="w3-content w3-section" style="max-width:1350px; margin-left: 20px;">
   <div class="container">
-  <img class="mySlides" src="image/pic1.png" style="width:100%;height: 670px">
-  <img class="mySlides" src="image/pic2.png" style="width:100%;height: 670px">
-  <img class="mySlides" src="image/pic3.png" style="width:100%; height: 670px">
+  
+  <img class="mySlides" src="image/pic3.png" style="width:100%; height: 100%">
   
    
 </div>
 </div>
 
 <div class="row">
-  <div class="column" style="background-color:white;text-align: center;">
+  <div class="column" style="text-align: center;">
     <h2 style="color: blue;">UPS</h2>
     <img src="image/ups.png" style="width: 200px;height: 140px;">
-    <p>parcel delivery</p>
+    <p>parcel delivery around the world</p>
+    <p>    </p>
     <h3 style="text-align: center;color: blue;">Australian Post</h3>
     <img src="image/ap.png" style="width: 200px;height: 140px;">
     <div class="notes">
-      <p>parcel deleivery</p>
+    
       
     </div>
   </div>
-  <div class="column" style="background-color:white;text-align: center;">
+  <div class="column" style="text-align: center;">
     <h2 style="color: blue;">Pack and Send</h2>
     <img src="image/ps.png" style="width: 200px;height: 140px;">
-    <p>parcel delivery</p>
+    <p>Fill at home with our team of delivery</p>
     <h2 style="color: blue">DHL</h2>
     <img src="image/ps.png" style="width: 200px;height: 140px;">
-  <p>  parcel deleivery</p>
+ 
   </div>
 </div>
 </main>
-<div class="other" style="text-align: center;background-color:white;">
-<h3 style="color: blue;">FedEx
+<div class="other" style="text-align: center;">
+<h3 style="color: blue;margin-top: 200px;">FedEx
 </h3>
-<img src="image/fd.png" style="width: 200px;height: 140px;">
-<p>
-parcel delivery anywhere</p>
 
+<p>
+Our main goal is our customer</p>
+<div>
+<h2> Express Shipping </h2>
+
+<div class="footer">
+  <ul>
+    <li><a class="active" href="main.html"><img src="image/home.png " style="width: 50 px;height: 50px;" ><br>Home</a> 
+
+    </li>
+    <li><a href="faq.html" style="margin-top: 55px;">FAQs</a></li>
+    <li><a class="active" href="price.html"><img src="image/dollar.png " style="width: 50 px;height: 50px;" ><br>Prices</a>      
+    </li>
+    <li><a href="zip.html" style="margin-top: 55px;">ZIP </a></li>
+    <li><a class="active" href="detail.html"><img src="image/build.png " style="width: 50 px;height: 50px;" ><br>Detail</a>      
+    </li>
+     
+   
+  </ul>
+</div>
+</div>
+</div>
 </div>
 <script>
 var myIndex = 0;
@@ -74,11 +117,19 @@ function carousel() {
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 2000); // Change image every 2 seconds
 }
+
+
+
+function robin() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 </script>
 
-<div class="footer">
-  <p>Welcome to parcels analyzsis website</p>
-</div>
 
 <script src="./js/main.js"></script>
 </body>

@@ -1,33 +1,38 @@
 <!DOCTYPE html>
-<HTml:5>
-    <head>
-      <link rel="manifest" href="manifest.json">
-        <link rel="stylesheet" type="text/css" href="./css/style.css">    
-      
-    </head>
-    <body>
-        <h2 style="margin-left: 400px;">Login Form</h2>
-        <form id="form">
-            <div class="container">
-              <label for="uname"><b>Username</b></label> <br>
-              <input type="text" placeholder="Enter Username" name="uname" required>
-          
-              <label for="psw"><b>Password</b></label><br>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-                   <label>
-                <input type="checkbox" checked="" name="remember"> Remember me
-              </label>
-              <button type="submit" >  Login</button>
-               <button  onclick="location.href = 'signup.html';"  style="background-color: blue;width: 100px;" type="submit">signup</button>
-            </div>
-          </form>
-          <script>
-              var form = document.getElementById("form");
-              form.addEventListener('submit', (e)=>{
-                e.preventDefault();
-                window.location.href = "main.html";
-              })
-          </script>
-          <script src="./js/main.js"></script>
-    </body>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./css/style.css"> 
+  
+  
+  <link rel="manifest" href="manifest.json">
+  <title>robon zakz</title>
+</head>
+<body>
+  <h2 style="margin-left: 400px; width:400px;">Login Form</h2>
+  <form id="form">
+      <div class="container">
+        <label for="uname"><b>Username</b></label> <br>
+        <input type="text" placeholder="Enter Username" name="uname" required><br>
+    
+        <label for="psw"><b>Password</b></label><br>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+             <label>
+          <input type="checkbox" checked="" name="remember"> Remember me
+        </label><br>
+        <button type="submit" >  Login</button><br>
+         <button  onclick="location.href = 'signup.html';"  style="background-color: blue;width: 100px;" type="submit">signup</button>
+      </div>
+    </form>
+    <script>
+        var form = document.getElementById("form");
+        form.addEventListener('submit', (e)=>{
+          e.preventDefault();
+          window.location.href = "main.html";
+        })
+    </script>
+    <script src="./js/main.js"></script>
+</body>
 </HTml:5>

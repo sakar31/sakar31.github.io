@@ -1,47 +1,109 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <link rel="manifest" href="./manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href="./css/style1.css">
+   
+   <link rel="manifest" href="./manifest.json" />
   </head>
+  <style>
+  
+ 
+    .mobile-container {
+      max-width: 480px;
+      margin: auto;
+      background-color: #555;
+      height: 940px;
+      color: white;
+      border-radius: 10px;
+    }
+      </style>
   <body>
-    <ul>
-      <li><a class="active" href="main.html">Home</a></li>
-      <li><a href="price.html">PRICES</a></li>
-      <li><a href="location.html">LOCATION</a></li>
-      <li><a href="zip.html">ZIP CODE</a></li>
-      <li><a href="faq.html">FAQs</a></li>
-      <li><a href="detail.html">DETAIL</a></li>
+    
+    
     </ul>
-
-    <div style="margin-left: 500px">
-      <h3>Australia post</h3>
+    <div class="mobile-container">
+      <div class="topnav">
+        <a href="javascript:void(0);" class="icon" onclick="robin()">
+          <i class="fa fa-bars"></i>
+        <a href="main.html" class="active">Home</a>
+        <div id="myLinks">
+          <a href="detail.html">Detail</a>
+          <a href="price.html">Price</a>
+          <a href="location.html">location</a>
+          <a href="zip.html">ZIP</a>
+          <a href="faq.html">FAQs</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="robin()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div style=" margin-left:50px;">
+      <h3 style="color:green;">Australia post</h3>
       <p>country: Australia</p>
       <p>City: South wales</p>
       <h4>zip code:20010</h4>
 
-      <h3>Pack and Send</h3>
+      <h3 style="color:green;">Pack and Send</h3>
       <p>country: England</p>
       <p>City: London</p>
       <h4>zip code:209990</h4>
-      <h3>UPS</h3>
+      <h3 style="color:green;">UPS</h3>
       <p>country: USA</p>
       <p>City: New York</p>
       <h4>zip code:3002022</h4>
-      <h3>FedEx</h3>
+      <h3 style="color:green;"y>FedEx</h3>
       <p>country: Hungary</p>
       <p>City: Budapest</p>
       <h4>zip code: 300022</h4>
-      <h3>DHL</h3>
+      <h3 style="color:green;">DHL</h3>
       <p>country: USA</p>
       <p>City: New Mexico</p>
       <h4>zip code: 200029</h4>
     </div>
-
+  
     <div class="footer">
-      <p>Welcome to Percels analyzsis website</p>
+      <ul style="margin-left: 100 px;">
+        <li><a class="active" href="main.html"><img src="image/home.png " style="width: 50 px;height: 50px;" ><br>Home</a> 
+    
+        </li>
+        <li><a href="faq.html" style="margin-top: 55px;">FAQs</a></li>
+        <li><a class="active" href="price.html"><img src="image/dollar.png " style="width: 50 px;height: 50px;" ><br>Prices</a>      
+        </li>
+        <li><a href="zip.html" style="margin-top: 55px;">ZIP </a></li>
+        <li><a class="active" href="detail.html"><img src="image/build.png " style="width: 50 px;height: 50px;" ><br>Detail</a>      
+        </li>
     </div>
-
+    </div>
+    <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+      
+      
+      
+      function robin() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+      </script>
     <script src="./js/main.js"></script>
   </body>
 </html>
