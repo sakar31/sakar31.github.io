@@ -28,7 +28,7 @@ width: 25%;}
 
 input[type=text], input[type=password] {
   width: 100%;
-  padding: 12px 20px;
+  padding: 12px 21px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -133,8 +133,8 @@ span.psw {
 }
 .footer {
    position: absolute;
-width:48.5%;
- 
+width:35.57%;
+border-radius: 25px; 
    background-color: black;
    color: white;
    text-align: center;
