@@ -41,7 +41,7 @@
       </a>
     </div>
 
-<h3 style="text-align: center;">Enter the value and the prices in numbers</h3>
+<h3 style="text-align: center;">Enter the values and the prices in numbers</h3>
 <h2><p id="answer"></p></h2>
 <div style="margin-left: 50; width: 400px;">
 	<label>Enter the size</label><br>
@@ -80,14 +80,16 @@
 
 
 <div class="footer">
-  <ul style="margin-left: 100 px;">
+  <ul style="  border-radius: 12px;">
     <li><a class="active" href="main.html"><img src="image/home.png " style="width: 50 px;height: 50px;" ><br>Home</a> 
 
     </li>
-    <li><a href="faq.html" style="margin-top: 55px;">FAQs</a></li>
+    
+    <li><a class="active" href="faq.html"><img src="image/QQ.png " style="width: 50 px;height: 50px;" ><br>FAQ</a>  
     <li><a class="active" href="price.html"><img src="image/dollar.png " style="width: 50 px;height: 50px;" ><br>Prices</a>      
     </li>
-    <li><a href="zip.html" style="margin-top: 55px;">ZIP </a></li>
+    
+    <li><a class="active" href="detail.html"><img src="image/ZZ.png " style="width: 50 px;height: 50px;" ><br>ZIP</a>      
     <li><a class="active" href="detail.html"><img src="image/build.png " style="width: 50 px;height: 50px;" ><br>Detail</a>      
     </li>
      
@@ -119,6 +121,14 @@ document.getElementById("ups").innerText="$50";
 document.getElementById("Aus").innerText="$30";
 document.getElementById("fed").innerText="$35";
   }
+  if (a>21||a<50 && b>0||b<20)
+  {
+document.getElementById("Pack").innerText="$20";
+document.getElementById("dhl").innerText="$40";
+document.getElementById("ups").innerText="$40";
+document.getElementById("Aus").innerText="$30";
+document.getElementById("fed").innerText="$35";
+  }
   if (a>0||a<22 && b>21||b<100)
   {
 document.getElementById("Pack").innerText="$22";
@@ -145,14 +155,7 @@ document.getElementById("Aus").innerText="$120";
 document.getElementById("fed").innerText="$133";
   }
 
-  if (a>99||a>0 && b<99||b>0)
-  {
-document.getElementById("Pack").innerText="$53";
-document.getElementById("dhl").innerText="$80";
-document.getElementById("ups").innerText="$78";
-document.getElementById("Aus").innerText="$90";
-document.getElementById("fed").innerText="$103";
-  }
+ 
   if (a<99 && b>99)
   {
 document.getElementById("Pack").innerText="$52";
