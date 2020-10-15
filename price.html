@@ -16,7 +16,7 @@
     max-width: 480px;
     margin: auto;
     background-color: #555;
-    height: 794px;
+    height: 800px;
     color: white;
     border-radius: 10px;
   }
@@ -41,13 +41,13 @@
       </a>
     </div>
 
-<h3 style="text-align: center;">Enter the values and the prices in numbers</h3>
+<h3 style="text-align: center;">The prices  and the weight will vary as follows: <p>0-25: 25-50: 50-75: 75-100</p></h3>
 <h2><p id="answer"></p></h2>
 <div style="margin-left: 50; width: 400px;">
 	<label>Enter the size</label><br>
-<input type="number" id="mine" name="" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"/ placeholder="enter size in cetimetres"><br>
+<input type="number" id="mine" name="" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"/ placeholder="enter size in centimetres"><br>
 <label>Enter weight</label><br>
-	<input id="text_a" type="number"  onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"/ placeholder="enter weight in grams"><br>
+	<input id="text_a" type="number"  onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"/ placeholder="enter weight in kilograms"><br>
 	
 	
 
@@ -96,77 +96,183 @@
    
   </ul>
 </div>
+
 <script>
 	function myFunction()
 {
-var a=document.getElementById("text_a").value;
-var b=document.getElementById("mine").value;
+  var a=document.getElementById("mine").value;
+var b=document.getElementById("text_a").value;
 
 
 
-if (a>0||a<22 && b>0||b<22)
+if (a>=0 && a<25 && b>=0 && b<25)
   {
-document.getElementById("Pack").innerText="$20";
-document.getElementById("dhl").innerText="$30";
-document.getElementById("ups").innerText="$40";
-document.getElementById("Aus").innerText="$20";
-document.getElementById("fed").innerText="$20";
+document.getElementById("Pack").innerText="$11";
+document.getElementById("dhl").innerText="$12";
+document.getElementById("ups").innerText="$13";
+document.getElementById("Aus").innerText="$14";
+document.getElementById("fed").innerText="$15";
   }
 
-if (a>21||a<50 && b>21||b<50)
-  {
-document.getElementById("Pack").innerText="$30";
-document.getElementById("dhl").innerText="$40";
-document.getElementById("ups").innerText="$50";
-document.getElementById("Aus").innerText="$30";
-document.getElementById("fed").innerText="$35";
-  }
-  if (a>21||a<50 && b>0||b<20)
-  {
-document.getElementById("Pack").innerText="$20";
-document.getElementById("dhl").innerText="$40";
-document.getElementById("ups").innerText="$40";
-document.getElementById("Aus").innerText="$30";
-document.getElementById("fed").innerText="$35";
-  }
-  if (a>0||a<22 && b>21||b<100)
+if (a>=25 && a<50 && b>=25 && b<50)
   {
 document.getElementById("Pack").innerText="$22";
+document.getElementById("dhl").innerText="$23";
+document.getElementById("ups").innerText="$24";
+document.getElementById("Aus").innerText="$25";
+document.getElementById("fed").innerText="$26";
+  }
+
+  if (a>=50 && a<75 && b>=50 && b<75)
+  {
+document.getElementById("Pack").innerText="$31";
 document.getElementById("dhl").innerText="$32";
-document.getElementById("ups").innerText="$42";
-document.getElementById("Aus").innerText="$23";
+document.getElementById("ups").innerText="$33";
+document.getElementById("Aus").innerText="$34";
+document.getElementById("fed").innerText="$35";
+  }
+
+   if (a>=75 && a<100 && b>=75 && b<100)
+  {
+document.getElementById("Pack").innerText="$41";
+document.getElementById("dhl").innerText="$42";
+document.getElementById("ups").innerText="$43";
+document.getElementById("Aus").innerText="$44";
+document.getElementById("fed").innerText="$45";
+  }
+  
+  if (a>=0 && a<25 && b>=25 && b<50)
+  {
+document.getElementById("Pack").innerText="$29";
+document.getElementById("dhl").innerText="$28";
+document.getElementById("ups").innerText="$37";
+document.getElementById("Aus").innerText="$36";
+document.getElementById("fed").innerText="$34";
+  }
+  if (a>=0 && a<25 && b>=50 && b<75)
+  {
+document.getElementById("Pack").innerText="$38";
+document.getElementById("dhl").innerText="$38";
+document.getElementById("ups").innerText="$37";
+document.getElementById("Aus").innerText="$38";
+document.getElementById("fed").innerText="$39";
+  }
+  if (a>=0 && a<25 && b>=75 && b<100)
+  {
+document.getElementById("Pack").innerText="$39";
+document.getElementById("dhl").innerText="$48";
+document.getElementById("ups").innerText="$41";
+document.getElementById("Aus").innerText="$40";
+document.getElementById("fed").innerText="$40";
+  }
+
+  if (a>=25 && a < 50 && b>=0 && b < 25)
+  {
+document.getElementById("Pack").innerText="$49";
+document.getElementById("dhl").innerText="$40";
+document.getElementById("ups").innerText="$39";
+document.getElementById("Aus").innerText="$45";
+document.getElementById("fed").innerText="$48";
+  }
+
+  if (a>=25 && a < 50 && b>=50 && b < 75)
+  {
+document.getElementById("Pack").innerText="$59";
+document.getElementById("dhl").innerText="$50";
+document.getElementById("ups").innerText="$59";
+document.getElementById("Aus").innerText="$55";
+document.getElementById("fed").innerText="$58";
+  }
+
+  if (a>=25 && a < 50 && b>=75 && b < 100)
+  {
+document.getElementById("Pack").innerText="$69";
+document.getElementById("dhl").innerText="$60";
+document.getElementById("ups").innerText="$69";
+document.getElementById("Aus").innerText="$65";
+document.getElementById("fed").innerText="$68";
+  }
+  if (a>=50 && a < 75 && b>=0 && b < 25)
+  {
+document.getElementById("Pack").innerText="$41";
+document.getElementById("dhl").innerText="$48";
+document.getElementById("ups").innerText="$45";
+document.getElementById("Aus").innerText="$43";
+document.getElementById("fed").innerText="$42";
+  }
+  if (a>=50 && a < 75 && b>=25 && b < 50)
+  {
+document.getElementById("Pack").innerText="$51";
+document.getElementById("dhl").innerText="$51";
+document.getElementById("ups").innerText="$51";
+document.getElementById("Aus").innerText="$51";
+document.getElementById("fed").innerText="$51";
+  }
+
+  if (a>=50 && a < 75 && b>=75 && b < 100)
+  {
+document.getElementById("Pack").innerText="$61";
+document.getElementById("dhl").innerText="$61";
+document.getElementById("ups").innerText="$61";
+document.getElementById("Aus").innerText="$61";
+document.getElementById("fed").innerText="$61";
+  }
+  if (a>=75 && a < 100 && b>=0 && b < 25)
+  {
+document.getElementById("Pack").innerText="$31";
+document.getElementById("dhl").innerText="$31";
+document.getElementById("ups").innerText="$31";
+document.getElementById("Aus").innerText="$31";
 document.getElementById("fed").innerText="$31";
   }
 
-   if (a>21||a<100 && b>0||b<22)
+  if (a>=75 && a < 100 && b>=25 && b < 50)
   {
-document.getElementById("Pack").innerText="$22";
-document.getElementById("dhl").innerText="$32";
-document.getElementById("ups").innerText="$42";
-document.getElementById("Aus").innerText="$23";
-document.getElementById("fed").innerText="$31";
+document.getElementById("Pack").innerText="$53";
+document.getElementById("dhl").innerText="$53";
+document.getElementById("ups").innerText="$53";
+document.getElementById("Aus").innerText="$53";
+document.getElementById("fed").innerText="$53";
   }
-  if (a>99 && b>99)
+  if (a>=75 && a < 100 && b>=50 && b < 75)
   {
-document.getElementById("Pack").innerText="$55";
-document.getElementById("dhl").innerText="$100";
-document.getElementById("ups").innerText="$88";
-document.getElementById("Aus").innerText="$120";
-document.getElementById("fed").innerText="$133";
+document.getElementById("Pack").innerText="$63";
+document.getElementById("dhl").innerText="$63";
+document.getElementById("ups").innerText="$63";
+document.getElementById("Aus").innerText="$63";
+document.getElementById("fed").innerText="$63";
   }
+
 
  
-  if (a<99 && b>99)
+
+  if (a>99 && b>99)
   {
-document.getElementById("Pack").innerText="$52";
-document.getElementById("dhl").innerText="$76";
-document.getElementById("ups").innerText="$66";
-document.getElementById("Aus").innerText="$59";
-document.getElementById("fed").innerText="$92";
+document.getElementById("Pack").innerText="Enter value between 0 to 99";
+document.getElementById("dhl").innerText="Enter value between 0 to 99";
+document.getElementById("ups").innerText="Enter value between 0 to 99";
+document.getElementById("Aus").innerText="Enter value between 0 to 99";
+document.getElementById("fed").innerText="Enter value between 0 to 99";
+  }
+ if (a>99 && b<100)
+  {
+document.getElementById("Pack").innerText="Enter value between 0 to 99";
+document.getElementById("dhl").innerText="Enter value between 0 to 99";
+document.getElementById("ups").innerText="Enter value between 0 to 99";
+document.getElementById("Aus").innerText="Enter value between 0 to 99";
+document.getElementById("fed").innerText="Enter value between 0 to 99";
+  }
+   if (a<100 && b>99)
+  {
+document.getElementById("Pack").innerText="Enter value between 0 to 99";
+document.getElementById("dhl").innerText="Enter value between 0 to 99";
+document.getElementById("ups").innerText="Enter value between 0 to 99";
+document.getElementById("Aus").innerText="Enter value between 0 to 99";
+document.getElementById("fed").innerText="Enter value between 0 to 99";
   }
 if(a<0 && b<0)
   {
-alert("Sorry, Enter only allowed numbers ");
+a
 document.getElementById("Pack").innerText="enter only allowed numbers in size option and weight option";
 document.getElementById("dhl").innerText="enter only allowed numbers in size option and weight option";
 document.getElementById("ups").innerText="enter only allowed numbers in size option and weight option";
