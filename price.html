@@ -8,19 +8,25 @@
  <link rel="stylesheet" type="text/css" href="./css/style1.css">
  
  <link rel="manifest" href="./manifest.json" />
-</head>
-<style>
+ <style>
   
  
   .mobile-container {
     max-width: 480px;
     margin: auto;
-    background-color: #555;
     height: 800px;
     color: white;
     border-radius: 10px;
+    background-image: url('image/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    background-attachment: fixed;
   }
     </style>
+</head>
+
 <body>
 
   <div class="mobile-container">
@@ -35,6 +41,7 @@
         <a href="price.html">Price</a>
         <a href="location.html">location</a>
         <a href="faq.html">FAQs</a>
+        <a href="index.html">Logout</a>
       </div>
       <a href="javascript:void(0);" class="icon" onclick="robin()">
         <i class="fa fa-bars"></i>
@@ -45,9 +52,9 @@
 <h2><p id="answer"></p></h2>
 <div style="margin-left: 50; width: 400px;">
 	<label>Enter the size</label><br>
-<input type="number" id="mine" name="" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"/ placeholder="enter size in centimetres"><br>
+<input type="number" id="mine" name="" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"/ placeholder="enter size in cetimetres"><br>
 <label>Enter weight</label><br>
-	<input id="text_a" type="number"  onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"/ placeholder="enter weight in kilograms"><br>
+	<input id="text_a" type="number"  onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')"/ placeholder="enter weight in grams"><br>
 	
 	
 
